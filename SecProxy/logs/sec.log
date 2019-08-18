@@ -1,0 +1,248 @@
+2019/08/04 16:37:34.956 [I] [main.go:16]  init sec success
+2019/08/04 16:37:35.066 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/08/05 20:50:34.870 [E] [init.go:109]  ping redis err: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2019/08/05 20:50:34.871 [E] [main.go:16]  init redis failed,err:dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2019/08/05 20:50:48.123 [I] [main.go:16]  init sec success
+2019/08/05 20:50:48.170 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/08/05 20:51:52.805 [I] [main.go:16]  init sec success
+2019/08/05 20:51:52.847 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/08/05 20:55:22.975 [D] [init.go:122]  key[%!s(int=0)] valued[key:"/oldboy/backend/seckill/product" create_revision:4 mod_revision:4 version:1 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/08/05 20:55:22.976 [E] [init.go:122]  unmarshal failed,err: json: Unmarshal(non-pointer []main.SecInfoConf)
+2019/08/05 20:57:18.225 [D] [init.go:122]  key[%!s(int=0)] valued[key:"/oldboy/backend/seckill/product" create_revision:4 mod_revision:4 version:1 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/08/05 20:57:18.225 [E] [init.go:122]  unmarshal failed,err: json: Unmarshal(non-pointer []main.SecInfoConf)
+2019/08/05 20:57:50.266 [D] [init.go:122]  key[%!s(int=0)] valued[key:"/oldboy/backend/seckill/product" create_revision:4 mod_revision:4 version:1 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/08/05 20:57:50.267 [D] [init.go:122]  sec info conf is [[{1029 1505008800 1505012400 0 0 1000} {1027 1505008800 1505012400 0 0 1000}]]
+2019/08/05 20:57:50.267 [I] [main.go:16]  init sec success
+2019/08/05 20:57:50.328 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/08/05 21:58:39.270 [D] [init.go:183]  key[%!s(int=0)] valued[key:"/oldboy/backend/seckill/product" create_revision:4 mod_revision:4 version:1 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/08/05 21:58:39.271 [D] [init.go:183]  sec info conf is [[{1029 1505008800 1505012400 0 0 1000} {1027 1505008800 1505012400 0 0 1000}]]
+2019/08/05 21:58:39.272 [I] [main.go:16]  init sec success
+2019/08/05 21:58:39.320 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/08/05 21:58:39.578 [D] [asm_amd64.s:1337]  begin watch key:/oldboy/backend/seckill/product
+2019/08/05 21:59:02.187 [D] [asm_amd64.s:1337]  get config from etcd, PUT "/oldboy/backend/seckill/product" : "[{\"ProductId\":1030,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]"
+
+2019/08/05 21:59:02.187 [D] [asm_amd64.s:1337]  get config from etcd succ, [{1030 1505008800 1505012400 0 0 1000} {1027 1505008800 1505012400 0 0 1000}]
+2019/08/06 23:18:44.588 [E] [init.go:171]  ping redis err: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2019/08/06 23:18:44.590 [E] [main.go:16]  init redis failed,err:dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2019/08/06 23:19:01.725 [D] [init.go:184]  key[%!s(int=0)] valued[key:"/oldboy/backend/seckill/product" create_revision:4 mod_revision:5 version:2 value:"[{\"ProductId\":1030,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/08/06 23:19:01.726 [D] [init.go:184]  sec info conf is [[{1030 1505008800 1505012400 0 0 1000} {1027 1505008800 1505012400 0 0 1000}]]
+2019/08/06 23:19:01.726 [D] [init.go:196]  init server success,config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:2379 5 /oldboy/backend/seckill/ /oldboy/backend/seckill/product} ./logs/sec.log debug map[1027:0xc0001768a0 1030:0xc0001768a0] {{0 0} 0 0 0 0}}
+2019/08/06 23:19:01.727 [I] [main.go:16]  init sec success
+2019/08/06 23:19:01.773 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/08/06 23:19:02.038 [D] [asm_amd64.s:1337]  begin watch key:/oldboy/backend/seckill/product
+2019/08/06 23:20:20.943 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|      997.5µs| nomatch|[44m GET     [0m /SecInfo
+2019/08/06 23:20:21.033 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /favicon.ico
+2019/08/06 23:21:11.508 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /SecKill
+2019/08/06 23:22:05.575 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|      998.8µs| nomatch|[44m GET     [0m /  
+2019/08/06 23:22:07.974 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     2.2417ms| nomatch|[44m GET     [0m /  
+2019/08/06 23:22:15.129 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|       2.15ms| nomatch|[44m GET     [0m /SecKill
+2019/08/06 23:22:42.415 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /SecKill
+2019/08/06 23:23:28.847 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|      996.9µs| nomatch|[44m GET     [0m /SecProxy/SecKill
+2019/08/06 23:23:39.142 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /SecKill
+2019/08/06 23:24:53.840 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /secKill
+2019/08/06 23:24:56.882 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|      999.7µs| nomatch|[44m GET     [0m /secKill
+2019/08/06 23:25:08.403 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      997.2µs|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/06 23:25:16.128 [E] [value.go:447]  invalid request,get product_id failed,err:strconv.Atoi: parsing "": invalid syntax
+2019/08/06 23:25:16.129 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      997.8µs|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/06 23:25:29.210 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/06 23:25:33.692 [E] [value.go:447]  invalid request,get product_id failed,err:not found product_id:103000
+2019/08/06 23:25:33.693 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      997.3µs|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/06 23:25:36.538 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      998.5µs|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/09 21:37:55.991 [E] [init.go:171]  ping redis err: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2019/08/09 21:37:55.991 [E] [main.go:16]  init redis failed,err:dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2019/08/09 21:44:51.529 [D] [init.go:184]  key[%!s(int=0)] valued[key:"/oldboy/backend/seckill/product" create_revision:4 mod_revision:6 version:3 value:"[{\"ProductId\":1030,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/08/09 21:44:51.530 [D] [init.go:184]  sec info conf is [[{1030 1505008800 1505012400 0 0 1000} {1027 1505008800 1505012400 0 0 1000}]]
+2019/08/09 21:44:51.531 [D] [init.go:196]  init server success,config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:2379 5 /oldboy/backend/seckill/ /oldboy/backend/seckill/product} ./logs/sec.log debug map[1027:0xc0001c6150 1030:0xc0001c6150] {{0 0} 0 0 0 0}}
+2019/08/09 21:44:51.531 [I] [main.go:16]  init sec success
+2019/08/09 21:44:51.582 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/08/09 21:44:51.836 [D] [asm_amd64.s:1337]  begin watch key:/oldboy/backend/seckill/product
+2019/08/09 22:00:47.535 [D] [init.go:184]  key[%!s(int=0)] valued[key:"/oldboy/backend/seckill/product" create_revision:4 mod_revision:6 version:3 value:"[{\"ProductId\":1030,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/08/09 22:00:47.536 [D] [init.go:184]  sec info conf is [[{1030 1505008800 1505012400 0 0 1000} {1027 1505008800 1505012400 0 0 1000}]]
+2019/08/09 22:00:47.537 [D] [init.go:196]  init server success,config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:2379 5 /oldboy/backend/seckill/ /oldboy/backend/seckill/product} ./logs/sec.log debug map[1027:0xc000150ba0 1030:0xc000150ba0] {{0 0} 0 0 0 0}}
+2019/08/09 22:00:47.537 [I] [main.go:16]  init sec success
+2019/08/09 22:00:47.588 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/08/09 22:00:47.841 [D] [asm_amd64.s:1337]  begin watch key:/oldboy/backend/seckill/product
+2019/08/09 22:03:00.419 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|      996.8µs| nomatch|[44m GET     [0m /secinfo？product_id=1030
+2019/08/09 22:03:00.498 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|      998.1µs| nomatch|[44m GET     [0m /favicon.ico
+2019/08/09 22:03:06.100 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      997.3µs|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/09 22:05:05.442 [D] [init.go:184]  key[%!s(int=0)] valued[key:"/oldboy/backend/seckill/product" create_revision:4 mod_revision:6 version:3 value:"[{\"ProductId\":1030,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/08/09 22:05:05.442 [D] [init.go:184]  sec info conf is [[{1030 1505008800 1505012400 0 0 1000} {1027 1505008800 1505012400 0 0 1000}]]
+2019/08/09 22:05:05.442 [D] [init.go:196]  init server success,config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:2379 5 /oldboy/backend/seckill/ /oldboy/backend/seckill/product} ./logs/sec.log debug map[1027:0xc000150b10 1030:0xc000150b10] {{0 0} 0 0 0 0}}
+2019/08/09 22:05:05.443 [I] [main.go:16]  init sec success
+2019/08/09 22:05:05.495 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/08/09 22:05:05.746 [D] [asm_amd64.s:1337]  begin watch key:/oldboy/backend/seckill/product
+2019/08/09 22:05:15.964 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/09 22:05:18.107 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/09 22:05:18.453 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/09 22:05:22.843 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/09 22:05:23.193 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/09 22:05:23.369 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/09 22:44:57.741 [D] [init.go:184]  key[%!s(int=0)] valued[key:"/oldboy/backend/seckill/product" create_revision:4 mod_revision:6 version:3 value:"[{\"ProductId\":1030,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/08/09 22:44:57.742 [D] [init.go:184]  sec info conf is [[{1030 1505008800 1505012400 0 0 1000} {1027 1505008800 1505012400 0 0 1000}]]
+2019/08/09 22:44:57.742 [D] [init.go:196]  init server success,config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:2379 5 /oldboy/backend/seckill/ /oldboy/backend/seckill/product} ./logs/sec.log debug map[1027:0xc0001b4150 1030:0xc0001b4150] {{0 0} 0 0 0 0}}
+2019/08/09 22:44:57.743 [I] [main.go:16]  init sec success
+2019/08/09 22:44:57.795 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/08/09 22:44:58.046 [D] [asm_amd64.s:1337]  begin watch key:/oldboy/backend/seckill/product
+2019/08/09 22:45:03.568 [E] [value.go:447]  invalid request,get product_id failed,err:not found product_id:10300000
+2019/08/09 22:45:03.569 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     1.9948ms|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/09 22:45:07.204 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/09 22:45:13.670 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      997.5µs|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/09 22:47:03.714 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/09 23:00:22.302 [D] [init.go:185]  key[%!s(int=0)] valued[key:"/oldboy/backend/seckill/product" create_revision:4 mod_revision:6 version:3 value:"[{\"ProductId\":1030,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/08/09 23:00:22.303 [D] [init.go:185]  sec info conf is [[{1030 1505008800 1505012400 0 0 1000} {1027 1505008800 1505012400 0 0 1000}]]
+2019/08/09 23:00:22.303 [D] [init.go:197]  init server success,config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:2379 5 /oldboy/backend/seckill/ /oldboy/backend/seckill/product} ./logs/sec.log debug map[1027:0xc000030510 1030:0xc0000304e0] {{0 0} 0 0 0 0}}
+2019/08/09 23:00:22.304 [I] [main.go:16]  init sec success
+2019/08/09 23:00:22.354 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/08/09 23:00:22.608 [D] [asm_amd64.s:1337]  begin watch key:/oldboy/backend/seckill/product
+2019/08/09 23:00:27.686 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     1.9949ms|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/09 23:00:28.477 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/09 23:00:28.738 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/09 23:00:28.910 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      994.6µs|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/09 23:00:29.107 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/11 13:25:55.010 [E] [init.go:172]  ping redis err: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2019/08/11 13:25:55.011 [E] [main.go:16]  init redis failed,err:dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2019/08/11 13:27:14.040 [D] [init.go:185]  key[%!s(int=0)] valued[key:"/oldboy/backend/seckill/product" create_revision:4 mod_revision:6 version:3 value:"[{\"ProductId\":1030,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/08/11 13:27:14.040 [D] [init.go:185]  sec info conf is [[{1030 1505008800 1505012400 0 0 1000} {1027 1505008800 1505012400 0 0 1000}]]
+2019/08/11 13:27:14.041 [D] [init.go:197]  init server success,config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:2379 5 /oldboy/backend/seckill/ /oldboy/backend/seckill/product} ./logs/sec.log debug map[1027:0xc0001f2150 1030:0xc0001f2120] {{0 0} 0 0 0 0}}
+2019/08/11 13:27:14.042 [I] [main.go:16]  init sec success
+2019/08/11 13:27:14.089 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/08/11 13:27:14.349 [D] [asm_amd64.s:1337]  begin watch key:/oldboy/backend/seckill/product
+2019/08/11 13:27:21.570 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 13:27:36.360 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 14:39:23.666 [D] [init.go:185]  key[%!s(int=0)] valued[key:"/oldboy/backend/seckill/product" create_revision:4 mod_revision:6 version:3 value:"[{\"ProductId\":1030,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/08/11 14:39:23.667 [D] [init.go:185]  sec info conf is [[{1030 1505008800 1505012400 0 0 1000} {1027 1505008800 1505012400 0 0 1000}]]
+2019/08/11 14:39:23.667 [D] [init.go:197]  init server success,config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:2379 5 /oldboy/backend/seckill/ /oldboy/backend/seckill/product} ./logs/sec.log debug map[1027:0xc00014eb70 1030:0xc00014eb40] {{0 0} 0 0 0 0} 3JxykLjaE0pTOMq1R95lMGHJKL94f7y0}
+2019/08/11 14:39:23.667 [I] [main.go:16]  init sec success
+2019/08/11 14:39:23.712 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/08/11 14:39:23.973 [D] [asm_amd64.s:1337]  begin watch key:/oldboy/backend/seckill/product
+2019/08/11 14:39:28.987 [W] [skill.go:45]  userId[%!d(string=)] invalid,check failed,req[&{1111      }]
+2019/08/11 14:39:28.988 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     1.0059ms|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:10:18.862 [D] [init.go:185]  key[%!s(int=0)] valued[key:"/oldboy/backend/seckill/product" create_revision:4 mod_revision:6 version:3 value:"[{\"ProductId\":1030,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/08/11 15:10:18.863 [D] [init.go:185]  sec info conf is [[{1030 1505008800 1505012400 0 0 1000} {1027 1505008800 1505012400 0 0 1000}]]
+2019/08/11 15:10:18.864 [D] [init.go:197]  init server success,config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:2379 5 /oldboy/backend/seckill/ /oldboy/backend/seckill/product} ./logs/sec.log debug map[1027:0xc0001f6180 1030:0xc0001f6150] {{0 0} 0 0 0 0} 3JxykLjaE0pTOMq1R95lMGHJKL94f7y0 1}
+2019/08/11 15:10:18.864 [I] [main.go:16]  init sec success
+2019/08/11 15:10:18.921 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/08/11 15:10:19.169 [D] [asm_amd64.s:1337]  begin watch key:/oldboy/backend/seckill/product
+2019/08/11 15:12:14.785 [D] [init.go:185]  key[%!s(int=0)] valued[key:"/oldboy/backend/seckill/product" create_revision:4 mod_revision:6 version:3 value:"[{\"ProductId\":1030,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/08/11 15:12:14.786 [D] [init.go:185]  sec info conf is [[{1030 1505008800 1505012400 0 0 1000} {1027 1505008800 1505012400 0 0 1000}]]
+2019/08/11 15:12:14.786 [D] [init.go:197]  init server success,config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:2379 5 /oldboy/backend/seckill/ /oldboy/backend/seckill/product} ./logs/sec.log debug map[1027:0xc0001c4810 1030:0xc0001c47e0] {{0 0} 0 0 0 0} 3JxykLjaE0pTOMq1R95lMGHJKL94f7y0 1}
+2019/08/11 15:12:14.787 [I] [main.go:16]  init sec success
+2019/08/11 15:12:14.840 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/08/11 15:12:15.093 [D] [asm_amd64.s:1337]  begin watch key:/oldboy/backend/seckill/product
+2019/08/11 15:12:25.214 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:12:25.670 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:12:25.813 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:12:25.973 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:12:26.124 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:12:26.302 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:12:26.444 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:12:26.612 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:12:26.918 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:12:27.069 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:12:27.236 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:12:27.421 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:12:27.588 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:12:27.740 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:12:27.902 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:12:28.069 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:12:28.261 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:12:28.445 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:12:28.612 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:12:28.757 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:43.665 [D] [init.go:185]  key[%!s(int=0)] valued[key:"/oldboy/backend/seckill/product" create_revision:4 mod_revision:6 version:3 value:"[{\"ProductId\":1030,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/08/11 15:13:43.666 [D] [init.go:185]  sec info conf is [[{1030 1505008800 1505012400 0 0 1000} {1027 1505008800 1505012400 0 0 1000}]]
+2019/08/11 15:13:43.667 [D] [init.go:197]  init server success,config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:2379 5 /oldboy/backend/seckill/ /oldboy/backend/seckill/product} ./logs/sec.log debug map[1027:0xc000294120 1030:0xc0002940f0] {{0 0} 0 0 0 0} 3JxykLjaE0pTOMq1R95lMGHJKL94f7y0 1}
+2019/08/11 15:13:43.667 [I] [main.go:16]  init sec success
+2019/08/11 15:13:43.711 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/08/11 15:13:43.972 [D] [asm_amd64.s:1337]  begin watch key:/oldboy/backend/seckill/product
+2019/08/11 15:13:50.392 [D] [init.go:185]  key[%!s(int=0)] valued[key:"/oldboy/backend/seckill/product" create_revision:4 mod_revision:6 version:3 value:"[{\"ProductId\":1030,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/08/11 15:13:50.393 [D] [init.go:185]  sec info conf is [[{1030 1505008800 1505012400 0 0 1000} {1027 1505008800 1505012400 0 0 1000}]]
+2019/08/11 15:13:50.396 [D] [init.go:197]  init server success,config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:2379 5 /oldboy/backend/seckill/ /oldboy/backend/seckill/product} ./logs/sec.log debug map[1027:0xc000292120 1030:0xc0002920f0] {{0 0} 0 0 0 0} 3JxykLjaE0pTOMq1R95lMGHJKL94f7y0 1}
+2019/08/11 15:13:50.397 [I] [main.go:16]  init sec success
+2019/08/11 15:13:50.442 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/08/11 15:13:50.702 [D] [asm_amd64.s:1337]  begin watch key:/oldboy/backend/seckill/product
+2019/08/11 15:13:53.262 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:53.964 [W] [skill.go:54]  service busy
+2019/08/11 15:13:53.964 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:54.565 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      997.3µs|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:54.932 [W] [skill.go:54]  service busy
+2019/08/11 15:13:54.933 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|        997µs|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:55.397 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:55.564 [W] [skill.go:54]  service busy
+2019/08/11 15:13:55.565 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|        996µs|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:55.749 [W] [skill.go:54]  service busy
+2019/08/11 15:13:55.750 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|        997µs|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:55.925 [W] [skill.go:54]  service busy
+2019/08/11 15:13:55.925 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      997.6µs|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:56.069 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:56.220 [W] [skill.go:54]  service busy
+2019/08/11 15:13:56.221 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      996.2µs|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:56.366 [W] [skill.go:54]  service busy
+2019/08/11 15:13:56.366 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:56.509 [W] [skill.go:54]  service busy
+2019/08/11 15:13:56.511 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     1.9991ms|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:56.668 [W] [skill.go:54]  service busy
+2019/08/11 15:13:56.669 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      994.4µs|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:56.821 [W] [skill.go:54]  service busy
+2019/08/11 15:13:56.821 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      997.3µs|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:57.052 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:57.230 [W] [skill.go:54]  service busy
+2019/08/11 15:13:57.231 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      997.6µs|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:57.380 [W] [skill.go:54]  service busy
+2019/08/11 15:13:57.380 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:57.549 [W] [skill.go:54]  service busy
+2019/08/11 15:13:57.550 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      996.9µs|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:57.725 [W] [skill.go:54]  service busy
+2019/08/11 15:13:57.726 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      992.7µs|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:58.140 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/11 15:13:58.709 [W] [skill.go:54]  service busy
+2019/08/11 15:13:58.709 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/17 14:11:36.654 [E] [init.go:172]  ping redis err: dial tcp: missing address
+2019/08/17 14:11:36.655 [E] [main.go:16]  init redis failed,err:dial tcp: missing address
+2019/08/17 14:17:14.425 [E] [init.go:172]  ping redis err: dial tcp: missing address
+2019/08/17 14:17:14.427 [E] [main.go:16]  init redis failed,err:dial tcp: missing address
+2019/08/17 14:21:53.161 [E] [init.go:172]  ping redis err: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2019/08/17 14:21:53.162 [E] [main.go:16]  init redis failed,err:dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2019/08/17 14:22:17.564 [D] [init.go:185]  key[%!s(int=0)] valued[key:"/oldboy/backend/seckill/product" create_revision:51419 mod_revision:51419 version:1 value:"[{\"ProductId\":1030,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/08/17 14:22:17.565 [D] [init.go:185]  sec info conf is [[{1030 1505008800 1505012400 0 0 1000} {1027 1505008800 1505012400 0 0 1000}]]
+2019/08/17 14:22:17.567 [D] [init.go:197]  init server success,config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:2379 5 /oldboy/backend/seckill/ /oldboy/backend/seckill/product} ./logs/sec.log debug map[1027:0xc0001c8a20 1030:0xc0001c89f0] {{0 0} 0 0 0 0} 3JxykLjaE0pTOMq1R95lMGHJKL94f7y0 1 [localhost baidu.com qq.com/seckill] 50 map[] map[] 0xc0001a15e0}
+2019/08/17 14:22:17.569 [I] [main.go:16]  init sec success
+2019/08/17 14:22:17.680 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/08/17 14:22:17.877 [D] [asm_amd64.s:1337]  begin watch key:/oldboy/backend/seckill/product
+2019/08/17 14:26:41.213 [D] [init.go:185]  key[%!s(int=0)] valued[key:"/oldboy/backend/seckill/product" create_revision:51419 mod_revision:51419 version:1 value:"[{\"ProductId\":1030,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/08/17 14:26:41.214 [D] [init.go:185]  sec info conf is [[{1030 1505008800 1505012400 0 0 1000} {1027 1505008800 1505012400 0 0 1000}]]
+2019/08/17 14:26:41.217 [D] [init.go:197]  init server success,config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:2379 5 /oldboy/backend/seckill/ /oldboy/backend/seckill/product} ./logs/sec.log debug map[1027:0xc000234150 1030:0xc000234120] {{0 0} 0 0 0 0} 3JxykLjaE0pTOMq1R95lMGHJKL94f7y0 1 [localhost baidu.com qq.com/seckill] 50 map[] map[] 0xc000224380}
+2019/08/17 14:26:41.218 [I] [main.go:16]  init sec success
+2019/08/17 14:26:41.327 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/08/17 14:26:41.527 [D] [asm_amd64.s:1337]  begin watch key:/oldboy/backend/seckill/product
+2019/08/17 14:26:46.227 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/17 14:26:46.313 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     1.9973ms| nomatch|[44m GET     [0m /favicon.ico
+2019/08/17 14:26:47.227 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/17 14:26:47.651 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/17 14:26:50.059 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/17 14:26:50.443 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/17 14:26:51.133 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/17 14:26:51.355 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/17 14:26:51.548 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/17 14:26:51.844 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/17 14:26:52.027 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/17 14:26:52.210 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/17 14:26:52.363 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/17 14:26:52.563 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/17 14:27:02.830 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/17 14:27:10.622 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     1.0016ms|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/17 14:27:13.881 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/17 14:27:22.144 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/17 14:27:27.497 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/17 14:27:28.696 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/17 14:27:30.024 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/17 14:27:34.912 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     1.0125ms|   match|[44m GET     [0m /secinfo   r:secinfo
+2019/08/17 14:27:40.607 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/17 14:27:46.544 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/17 14:27:51.362 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|     3.0018ms| nomatch|[44m GET     [0m /seckil
+2019/08/17 14:28:09.647 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /seckil
+2019/08/17 14:28:11.932 [D] [server.go:2774]  |      127.0.0.1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /seckil
+2019/08/17 14:28:15.740 [D] [value.go:447]  client request address = &{1030     0  2019-08-17 14:28:15.7405744 +0800 CST m=+94.565836601 127.0.0.1 }
+2019/08/17 14:28:15.741 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      998.9µs|   match|[44m GET     [0m /seckill   r:/seckill
+2019/08/17 14:28:22.186 [D] [value.go:447]  client request address = &{1030     0  2019-08-17 14:28:22.1865761 +0800 CST m=+101.011837001 127.0.0.1 }
+2019/08/17 14:28:22.186 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
