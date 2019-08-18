@@ -2,65 +2,78 @@ package service
 
 import (
 	"fmt"
+	"github.com/astaxie/beego/logs"
 	"sync"
 )
 
-var (
-	secLimitMgr = &SecLimitMgr{
-		UserLimitMap:make(map[int]*SecLimit,10000),
-	}
-)
-
 type SecLimitMgr struct {
-	UserLimitMap map[int]*SecLimit
-	IpLimitMap map[string]*SecLimit
-	lock sync.Mutex
+	UserLimitMap map[int]*Limit
+	IpLimitMap   map[string]*Limit
+	lock         sync.Mutex
 }
 
-func antiSpan(req *SecRequest)(err error) {
-	secLimitMgr.lock.Lock()
-	secLimit,ok := secLimitMgr.UserLimitMap[req.UserId]
-	if !ok {
-		secLimit = &SecLimit{}
-		secLimitMgr.UserLimitMap[req.UserId] = secLimit
-	}
-	count := secLimit.Count(req.AccessTime.Unix())
+func antiSpan(req *SecRequest) (err error) {
 
-	ipLimit,ok := secLimitMgr.IpLimitMap[req.ClientAddr]
-	if !ok {
-		ipLimit = &SecLimit{}
-		secLimitMgr.IpLimitMap[req.ClientAddr] = ipLimit
+	_, ok := secKillConf.IdBlackMap[req.UserId]
+	if ok {
+		err = fmt.Errorf("invalid request")
+		logs.Error("userId[%v] is block by id black list", req.UserId)
+		return
 	}
-	count = secLimit.Count(req.AccessTime.Unix())
 
-	secLimitMgr.lock.Unlock()
-	if count > secKillConf.IpSecAccessLimit {
+	_, ok = secKillConf.IpBlackMap[req.ClientAddr]
+	if ok {
+		err = fmt.Errorf("invalid request")
+		logs.Error("userId[%v] ip[%v] is block by id black list", req.UserId, req.ClientAddr)
+		return
+	}
+
+	secKillConf.SecLimitMgr.lock.Lock()
+	//uid频率控制
+	limit, ok := secKillConf.SecLimitMgr.UserLimitMap[req.UserId]
+	if !ok {
+		limit = &Limit{
+			secLimit: &SecLimit{},
+			minLimit: &MinLimit{},
+		}
+		secKillConf.SecLimitMgr.UserLimitMap[req.UserId] = limit
+	}
+
+	secIdCount := limit.secLimit.Count(req.AccessTime.Unix())
+	minIdCount := limit.minLimit.Count(req.AccessTime.Unix())
+
+	//ip频率控制
+	limit, ok = secKillConf.SecLimitMgr.IpLimitMap[req.ClientAddr]
+	if !ok {
+		limit = &Limit{
+			secLimit: &SecLimit{},
+			minLimit: &MinLimit{},
+		}
+		secKillConf.SecLimitMgr.IpLimitMap[req.ClientAddr] = limit
+	}
+
+	secIpCount := limit.secLimit.Count(req.AccessTime.Unix())
+	minIpCount := limit.minLimit.Count(req.AccessTime.Unix())
+	secKillConf.SecLimitMgr.lock.Unlock()
+
+	if secIpCount > secKillConf.AccessLimitConf.IPMinAccessLimit {
+		err = fmt.Errorf("invalid request")
+		return
+	}
+
+	if minIpCount > secKillConf.AccessLimitConf.IPMinAccessLimit {
+		err = fmt.Errorf("invalid request")
+		return
+	}
+
+	if secIdCount > secKillConf.AccessLimitConf.UserSecAccessLimit {
+		err = fmt.Errorf("invalid request")
+		return
+	}
+
+	if minIdCount > secKillConf.AccessLimitConf.UserMinAccessLimit {
 		err = fmt.Errorf("invalid request")
 		return
 	}
 	return
-}
-
-type SecLimit struct {
-	count int
-	curTime int64
-}
-
-func (p *SecLimit) Count(nowTime int64)(curCount int){
-	if p.curTime != nowTime{
-		p.count = 1
-		p.curTime = nowTime
-		curCount = p.count
-		return
-	}
-	p.count++
-	curCount = p.count
-	return
-}
-
-func (p *SecLimit) check(nowTime int64) int{
-	if p.curTime != nowTime{
-		return 0
-	}
-	return p.count
 }

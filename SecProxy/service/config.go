@@ -6,54 +6,65 @@ import (
 	"time"
 )
 
-const(
-	ProductStatusNormal = 0
-	ProductStatusSaleOut = 1
+const (
+	ProductStatusNormal       = 0
+	ProductStatusSaleOut      = 1
 	ProductStatusForceSaleOut = 2
 )
 
 type RedisConf struct {
-	RedisAddr string
-	RedisMaxIdle int
-	RedisMaxActive int
+	RedisAddr        string
+	RedisMaxIdle     int
+	RedisMaxActive   int
 	RedisIdleTimeout int
 }
 
 type EtcdConf struct {
-	EtcdAddr string
-	Timeout int
-	EtcdSecKeyPrefix string  //秒杀系统etcd的前缀key
+	EtcdAddr          string
+	Timeout           int
+	EtcdSecKeyPrefix  string //秒杀系统etcd的前缀key
 	EtcdSecProductKey string
 }
 
+type AccessLimitConf struct {
+	IPSecAccessLimit   int
+	UserSecAccessLimit int
+	IPMinAccessLimit   int
+	UserMinAccessLimit int
+}
+
 type SecSkillConf struct {
-	RedisBlackConf RedisConf
-	RedisProxy2LyerConf RedisConf
+	RedisBlackConf       RedisConf
+	RedisProxy2LyerConf  RedisConf
+	RedisLayer2ProxyConf RedisConf
 
-	EtcdConf EtcdConf
-	LogPath string
-	LogLevel string
+	EtcdConf          EtcdConf
+	LogPath           string
+	LogLevel          string
 	SecProductInfoMap map[int]*SecProductInfoConf
-	RwSecProductLock sync.RWMutex
-	CookieSecretKey string
-	UserAccessLimit int
-	ReferWiteList []string
-	IpSecAccessLimit int
-	IpBlackMap map[string]bool
-	IdBlackMap map[int]bool
+	RwSecProductLock  sync.RWMutex
+	CookieSecretKey   string
+	UserAccessLimit   int
+	ReferWiteList     []string
+	IpSecAccessLimit  int
+	IpBlackMap        map[string]bool
+	IdBlackMap        map[int]bool
 
-	BlackRedisPool *redis.Pool
+	BlackRedisPool       *redis.Pool
 	Proxy2LayerRedisPool *redis.Pool
 
-	RWBlackLock sync.RWMutex
+	SecLimitMgr          *SecLimitMgr
+	AccessLimitConf      AccessLimitConf
+	layer2ProxyRedisPool *redis.Pool
 
+	RWBlackLock                  sync.RWMutex
 	WriteProxy2LayerGoroutineNum int
-	ReadProxy2LayerGoroutineNum int
+	ReadProxy2LayerGoroutineNum  int
 
-	SecReqChan chan *SecRequest
+	SecReqChan     chan *SecRequest
 	SecReqChanSize int
 
-	UserConnMap map[string]chan *SecResult
+	UserConnMap     map[string]chan *SecResult
 	UserConnMapLock sync.Mutex
 }
 
@@ -61,28 +72,28 @@ type SecSkillConf struct {
 type SecProductInfoConf struct {
 	ProductId int
 	StartTime int64
-	EndTime int64
-	Status int
-	Count int
-	Left int
+	EndTime   int64
+	Status    int
+	Count     int
+	Left      int
 }
 
 type SecResult struct {
 	ProductId int
-	UserId int
-	Code int
-	Token string
+	UserId    int
+	Code      int
+	Token     string
 }
 
 type SecRequest struct {
-	ProductId int
-	Source string
-	AuthCode string
-	SecTime string
-	Nance string
-	UserId int
-	UserAuthSign string
-	AccessTime time.Time
-	ClientAddr string
+	ProductId     int
+	Source        string
+	AuthCode      string
+	SecTime       string
+	Nance         string
+	UserId        int
+	UserAuthSign  string
+	AccessTime    time.Time
+	ClientAddr    string
 	ClientRefence string
 }
